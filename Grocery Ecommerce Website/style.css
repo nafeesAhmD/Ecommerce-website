@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, arial;
+    font-size: 16px;
+    /* color: green; */
+    color: #008000;
+}
+
+a{
+    text-decoration: none;
+}
+
+:target{
+    display: block!important;
+}
+header {
+    /* box-shadow: 0px 0px 10px 0px #0000001f;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 2rem; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .3rem 9%;
+    background: #fff;
+
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 10px;
+
+}
+.heads{
+    margin: 6px 0px 4px 0px;
+    display: flex;
+}
+.logo{
+    max-width: 30%;
+    min-width: 200px;
+}
+.logo img {
+    width: 150px;
+}
+.menu {
+    max-width: 70%;
+    min-width: 100px;
+    margin-left: auto;
+    text-align: center;
+}
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0px;
+    margin-top: 18px;
+}
+.menu ul li {
+    font-weight: 500;
+    font-size: 18px;
+}
+.openicon {
+    display: none;
+    position: relative;
+    float: right;
+    font-size: 34px;
+    right: 8px;
+    font-weight: bold;
+}
+.closeicon {
+    display: none;
+    float: right;
+    font-size: 28px;
+}
+
+/* Mobile screens */
+
+@media screen and (max-width: 480px) {
+
+    .openicon, .closeicon {
+        display: block;
+    }
+    #menu{
+        position: fixed;
+        left: 0px;
+        background: #00000094;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        text-align: left;
+        display: none;
+    }  
+    .menu-inner{
+        background: #ffff;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        width: 70%;
+        position: absolute;
+        padding: 20px;
+    } 
+    #menu ul {
+         display: block;
+         margin-top: 45px;   
+    }
+    #menu ul li {
+        margin-bottom: 25px;
+    }
+}
+
+/* section 2 */
+
+.hero-sec{
+    width: 100%;
+    margin-top: 1.5rem
+}
+.silder{
+    object-fit: cover;
+    width: 100%;
+    height: 580px;
+    object-position: bottom;
+}
+
+@media screen and (max-width: 768px){
+.silder{
+    height: 375px;
+    width: 100%;
+}
+}
+/* ipad screen */
+@media screen and (max-width: 480px){
+    .silder{
+        height: 100%;
+    }
+}
+
+.category {
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    display: grid;
+    gap: 15px;
+    margin: 80px 0px;
+    text-align: center;
+}
+
+.category div {
+    padding: 20px 0px;
+    border-radius: 12px;
+    background: #fafafa;
+    border: 2px dashed green;
+}
+.category img{
+    height: 125px;
+}
+.category h4 {
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+/* ipad screen */
+@media only screen and (min-device-width: 768px) and (max-device-width: 768px) {
+    .category{
+        grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+        gap: 25px;
+    }
+    
+}
+
+
+.product {
+    margin: 100px 0px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.pro {
+    border: 1px solid #d0d0d0;
+    padding: 0px 0px 30px 0px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.pro img {
+    width: 160px;
+}
+
+.pro h2 {
+    font-size: 18px;
+    margin: 20px 0px 5px 0px;
+}
+
+.pro a {
+    text-align: center;
+    background: forestgreen;
+    color: #fff;
+    padding: 11px 4px;
+    width: 200px;
+    display: inline-block;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.pro p{
+    margin-top: 5px;
+    color: forestgreen;
+    font-size: 14px;
+}
+
+.banner img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.banner {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: grid;
+    margin: 40px 0px;
+    gap: 20px;
+    padding: 0px 10px;
+    
+}
+
+/* footer section */
+footer{
+    background: #f2ffe4;
+    padding: 40px 0px;
+    margin: 0 auto;
+    
+}
+.foots{
+    padding: 20px 0px 20px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 50px;
+    
+}
+.foots p {
+    padding-right: 60px;
+    line-height: 28px;
+}
+.foots table td {
+    padding: 10px 0px;
+}
+.col-foot h2 {
+    font-size: 18px;
+    margin-bottom: 25px;
+
+}
+.col-foot li {
+    margin-bottom: 15px;
+    /* list-style-type: disclosure-colsed; */
+    
+}
